@@ -10,17 +10,5 @@ public abstract class MysqlDao {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory(DATABASE);
 		return emf.createEntityManager();
 	}
-	public void eliminarDatos() {
-		EntityManager eManager=null;
-		try {
-			eManager = getEntityManager();
-			eManager.getTransaction().begin();
-			Query query = eManager.createNativeQuery("DELETE FROM " + getName());
-			query.executeUpdate();
-			eManager.getTransaction().commit();
-		} catch (Exception e) {
-		    e.printStackTrace();
-		}
-	}
 	public abstract String getName();
 }
