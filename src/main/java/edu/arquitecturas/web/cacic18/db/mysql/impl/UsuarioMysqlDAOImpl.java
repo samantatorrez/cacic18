@@ -8,6 +8,7 @@ import javax.persistence.Persistence;
 
 import edu.arquitecturas.web.cacic18.db.MysqlDao;
 import edu.arquitecturas.web.cacic18.db.UsuarioDao;
+import edu.arquitecturas.web.cacic18.entity.Trabajo;
 import edu.arquitecturas.web.cacic18.entity.Usuario;
 
 public class UsuarioMysqlDAOImpl extends MysqlDao implements UsuarioDao{
@@ -78,5 +79,25 @@ public class UsuarioMysqlDAOImpl extends MysqlDao implements UsuarioDao{
 	@Override
 	public String getName() {
 		return name;
+	}
+	@Override
+	public void eliminarDatos() {
+		List<Usuario> usuarios = null;
+		EntityManager eManager= null;
+		try{
+			eManager = getEntityManager();
+			eManager.getTransaction().begin();
+			usuarios  = eManager.createQuery(
+			         "Select a From "+getName()+" a", Usuario.class).getResultList();
+			for(Usuario u: usuarios) {
+				eManager.remove(u);
+			}
+			eManager.getTransaction().commit();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println(e.getCause());
+		}finally{
+			eManager.close();
+		}
 	}
 }
