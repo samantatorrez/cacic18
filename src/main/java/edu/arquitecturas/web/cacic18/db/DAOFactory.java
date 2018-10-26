@@ -6,6 +6,7 @@ import edu.arquitecturas.web.cacic18.db.mysql.impl.UsuarioMysqlDAOImpl;
 
 public class DAOFactory 
 {
+	
 	public static RevisionDao getRevisionDao(String db) {
 		switch(db.toUpperCase()) {
 		   case "MYSQL" :
@@ -13,6 +14,7 @@ public class DAOFactory
 		      return new RevisionMysqlDAOImpl();
 		}
 	}
+	
 	public static UsuarioDao getUsuarioDao(String db) {
 		switch(db.toUpperCase()) {
 		   case "MYSQL" :
@@ -20,6 +22,7 @@ public class DAOFactory
 		      return new UsuarioMysqlDAOImpl();
 		}
 	}
+	
 	public static TrabajoDao getTrabajoDao(String db) {
 		switch(db.toUpperCase()) {
 		   case "MYSQL" :
@@ -27,4 +30,5 @@ public class DAOFactory
 		      return new TrabajoMysqlDAOImpl();
 		}
 	}
+	
 }

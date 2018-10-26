@@ -17,7 +17,5 @@ public class CacicService {
 		this.trabajo = DAOFactory.getTrabajoDao(db);
 		this.db = db;
 	}
-	
-	
 
 }

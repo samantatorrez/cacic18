@@ -4,12 +4,16 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+
 public abstract class MysqlDao {
+	
 	private static final String DATABASE="cacic-mysql";
+	
 	public EntityManager getEntityManager() {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory(DATABASE);
 		return emf.createEntityManager();
 	}
+	
 	public void eliminarDatos() {
 		EntityManager eManager=null;
 		try {
@@ -22,5 +26,7 @@ public abstract class MysqlDao {
 		    e.printStackTrace();
 		}
 	}
+	
 	public abstract String getName();
+	
 }
