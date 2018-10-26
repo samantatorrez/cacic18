@@ -1,4 +1,4 @@
-package edu.arquitecturas.web.cacic18.db;
+package main.java.edu.arquitecturas.web.cacic18.db;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

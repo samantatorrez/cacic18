@@ -1,4 +1,4 @@
-package edu.arquitecturas.web.cacic18.entity;
+package main.java.edu.arquitecturas.web.cacic18.entity;
 
 import java.util.Date;
 import java.util.UUID;

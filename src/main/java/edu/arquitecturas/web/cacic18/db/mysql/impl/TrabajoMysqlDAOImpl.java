@@ -1,13 +1,12 @@
-package edu.arquitecturas.web.cacic18.db.mysql.impl;
+package main.java.edu.arquitecturas.web.cacic18.db.mysql.impl;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
 
-import edu.arquitecturas.web.cacic18.db.MysqlDao;
-import edu.arquitecturas.web.cacic18.db.TrabajoDao;
-import edu.arquitecturas.web.cacic18.entity.Trabajo;
+import main.java.edu.arquitecturas.web.cacic18.db.MysqlDao;
+import main.java.edu.arquitecturas.web.cacic18.db.TrabajoDao;
+import main.java.edu.arquitecturas.web.cacic18.entity.Trabajo;
 
 public class TrabajoMysqlDAOImpl extends MysqlDao implements TrabajoDao{
 	private String name = "Trabajo";
@@ -27,6 +26,7 @@ public class TrabajoMysqlDAOImpl extends MysqlDao implements TrabajoDao{
 		}
 		return trabajo.getIdTrabajo();
 	}
+	
 	public Trabajo getTrabajo(Integer id) {
 		Trabajo trabajo = null;
 		EntityManager eManager=null;

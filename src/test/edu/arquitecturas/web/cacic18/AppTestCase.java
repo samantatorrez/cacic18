@@ -1,4 +1,4 @@
-package edu.arquitecturas.web.cacic18;
+package test.edu.arquitecturas.web.cacic18;
 
 import java.util.List;
 
@@ -6,14 +6,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import edu.arquitecturas.web.cacic18.db.DAOFactory;
-import edu.arquitecturas.web.cacic18.db.RevisionDao;
-import edu.arquitecturas.web.cacic18.db.TrabajoDao;
-import edu.arquitecturas.web.cacic18.db.UsuarioDao;
-import edu.arquitecturas.web.cacic18.entity.Revision;
-import edu.arquitecturas.web.cacic18.entity.Trabajo;
-import edu.arquitecturas.web.cacic18.entity.Usuario;
 import junit.framework.TestCase;
+import main.java.edu.arquitecturas.web.cacic18.db.DAOFactory;
+import main.java.edu.arquitecturas.web.cacic18.db.RevisionDao;
+import main.java.edu.arquitecturas.web.cacic18.db.TrabajoDao;
+import main.java.edu.arquitecturas.web.cacic18.db.UsuarioDao;
+import main.java.edu.arquitecturas.web.cacic18.entity.Trabajo;
+import main.java.edu.arquitecturas.web.cacic18.entity.Usuario;
 
 public class AppTestCase extends TestCase {
 	private UsuarioDao usuarioDao;

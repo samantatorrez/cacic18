@@ -1,12 +1,12 @@
-package edu.arquitecturas.web.cacic18.db;
+package main.java.edu.arquitecturas.web.cacic18.db;
 
 import java.util.List;
 
-import edu.arquitecturas.web.cacic18.entity.Revision;
+import main.java.edu.arquitecturas.web.cacic18.entity.Revision;
 
 public interface RevisionDao {
 	
-	public void altaRevision();
+	public void altaRevision(Revision revision);
 	public Revision getRevision(Integer id);
 	public List<Revision> getRevisiones();
 	public void bajaRevision(Integer id);

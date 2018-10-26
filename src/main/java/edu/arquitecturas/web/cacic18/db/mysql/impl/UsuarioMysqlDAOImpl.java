@@ -1,15 +1,12 @@
-package edu.arquitecturas.web.cacic18.db.mysql.impl;
+package main.java.edu.arquitecturas.web.cacic18.db.mysql.impl;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
-import edu.arquitecturas.web.cacic18.db.MysqlDao;
-import edu.arquitecturas.web.cacic18.db.UsuarioDao;
-import edu.arquitecturas.web.cacic18.entity.Trabajo;
-import edu.arquitecturas.web.cacic18.entity.Usuario;
+import main.java.edu.arquitecturas.web.cacic18.db.MysqlDao;
+import main.java.edu.arquitecturas.web.cacic18.db.UsuarioDao;
+import main.java.edu.arquitecturas.web.cacic18.entity.Usuario;
 
 public class UsuarioMysqlDAOImpl extends MysqlDao implements UsuarioDao{
 	private String name = "Usuario";
